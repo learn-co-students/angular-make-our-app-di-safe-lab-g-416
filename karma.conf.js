@@ -22,6 +22,13 @@ module.exports = function (config) {
         autoWatch: false,
         browsers: ['Chrome'],
         singleRun: true,
-        concurrency: Infinity
+        concurrency: Infinity,
+        browsers: ['Chrome_Windows'],
+        customLaunchers: {
+            Chrome_Windows: {
+              base: 'Chrome',
+              chromeDataDir: "chrome_data"
+            }
+        }
     })
 }
